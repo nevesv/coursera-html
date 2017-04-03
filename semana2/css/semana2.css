@@ -1,0 +1,103 @@
+/***** Base Styles *****/
+*{
+	box-sizing: border-box;
+	/*font-family: Helvetica;*/
+}
+
+div{
+	float:left;
+}
+
+/* Estilo aplicado a todo h1 que seja descendente direto do body */
+body > h1 {
+	text-align: center;
+	font-size: 175%
+}
+
+section{
+	
+	background-color: #778090;
+	border: 1px black solid;
+
+	/*overflow:auto;*/
+	
+	margin-bottom: 15px;
+	margin-left: 5px;
+	margin-right: 5px;
+
+	
+}
+
+/* estilo aplicado a todos os h1 dentro de alguma section. Para aplicar somente ao herdeiro direto, ou seja, apenas 1 nível de "herança", usar o seletor >, fazendo: "section > h1 {  }" */
+section h1{
+	width: 150px;
+	border: 1px black solid;
+	/*border-collapse: collapse;*/
+	border-top: none;
+	border-right: none;
+
+	float:right;
+
+	text-align: center;
+	font-size: 125%;
+	color:white;
+	background-color: #005030;
+
+	margin-top:0px;
+}
+
+/*Estilo do header da Section 1*/
+#subHeader1{
+	color:black;
+	background-color:#135252;
+}
+
+/*Estilo do header da Section 2*/
+#subHeader2{
+	color:black;
+	background-color:#936967;
+}
+
+/*Estilo do header da Section 3*/
+#subHeader3{
+	color:white;
+	background-color:#290952;
+}
+
+/*h1:nth-of-type(1){
+	background-color: black;
+}*/
+
+/* Estilo aplicado somente aos p dentro de section (em qualquer nível de descendencia) */
+section p{
+	clear:right;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+/***** Simple responsive CSS styles *****/
+
+/* Desktop view */
+@media (min-width: 992px) {
+	.col-lg-4{
+		width: 33.33%;
+	}
+}
+
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 991px) {
+	.col-md-6{
+		width: 50%;
+	}
+	.col-md-12{
+		width: 100%;
+	}
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+	.col-sm-12{
+		width:100%;
+	}
+}
