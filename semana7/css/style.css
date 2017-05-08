@@ -1,0 +1,17 @@
+.message {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.enterDataMessage{
+  color:red;
+}
+.enterDataTexbox{
+  border-color:red;
+}
+.successMessage{
+  color:green;
+}
+.successTextbox{
+  border-color:green;
+}
