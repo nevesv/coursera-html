@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+      <title>Shopping List Check Off - Semana 8</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="styles/bootstrap.min.css">
+      <link rel="stylesheet" href="styles/style.css">
+
+      <script src="js/angular.min.js"></script>
+      <script src="js/app.js"></script>
+    </head>
+    <body data-ng-app="ShoppingListCheckOff">
+        <div class="container">
+          <div class="page-header">
+            <h1 class="">Shopping List Check Off <small>Semana 8</small></h1>
+          </div>
+            <div class="row">
+                <!-- to buy list -->
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" data-ng-controller="ToBuyController as addItem">
+                    <h2>To Buy:</h2>
+                    <ul class="list-group" data-ng-if="addItem.items.length > 0">
+                      <li class="list-group-item" data-ng-repeat="item in addItem.items">
+                        Buy {{item.quantity}} {{item.name}}
+                        <span class="badge">
+                          <button class="btn btn-xs btn-default" data-ng-click="addItem.buyItem($index)">
+                            <span class="glyphicon glyphicon-ok"></span> Bought
+                          </button>
+                        </span>
+                      </li>
+                    </ul>
+                    <!-- <div class="emptyMessage" data-ng-if="addItem.items.length == 0"> -->
+                    <div class="alert alert-success" data-ng-if="addItem.items.length == 0">
+                      <span class="glyphicon glyphicon-ok-sign"></span>
+                      Everything is bought!
+                    </div>
+                </div>
+
+                <!-- Already bought list -->
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" data-ng-controller="AlreadyBoughtController as showList">
+                    <h2>Already Bought:</h2>
+                    <ul class="list-group" data-ng-if="showList.items.length > 0">
+                      <li class="list-group-item" data-ng-repeat="item in showList.items">
+                        Bought {{item.quantity}} {{item.name}}
+                      </li>
+                    </ul>
+                    <!-- <div class="emptyMessage" data-ng-if="showList.items.length == 0"> -->
+                    <div class="alert alert-warning" data-ng-if="showList.items.length == 0">
+                      <span class="glyphicon glyphicon-exclamation-sign"></span>
+                      Nothing bought yet
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
