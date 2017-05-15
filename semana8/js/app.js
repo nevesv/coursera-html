@@ -17,6 +17,14 @@ var shoppingList2 = [
   {
     name: "Chocolate",
     quantity: "5"
+  },
+  {
+    name: "Peanut Butter",
+    quantity: "3"
+  },
+  {
+    name: "Pepto Bismol",
+    quantity: "30"
   }
 ];
 
