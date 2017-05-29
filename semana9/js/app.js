@@ -26,9 +26,9 @@ function foundItemsDirective(){
 }
 
 function foundItemsDirectiveLink(scope,element,attrs,controller){
-	console.log("Link scope is: ", scope);
-	console.log("Controller instance is: ", controller);
-	console.log("Element is: ", element);
+	//console.log("Link scope is: ", scope);
+	//console.log("Controller instance is: ", controller);
+	//console.log("Element is: ", element);
 
 	scope.$watch('foundList.displayAlert()',function(displayAlert){
 		if (displayAlert === true){
@@ -41,13 +41,13 @@ function foundItemsDirectiveLink(scope,element,attrs,controller){
 	
 
 	function displayNothingFoundAlert(){
-		console.log('Including alert!');
+		//console.log('Including alert!');
 		var alertElement = element.find("div.error");
 		alertElement.slideDown(900);
 	}
 
 	function removeNothingFoundAlert(){
-		console.log('Removing alert!');
+		//console.log('Removing alert!');
 		var alertElement = element.find("div.error");
 		alertElement.slideUp(900);
 	}
