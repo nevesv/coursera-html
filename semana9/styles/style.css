@@ -1,0 +1,22 @@
+.error{
+  display: none;
+}
+.jumbotron{
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+}
+.alert{
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.btn-primary{
+  margin-top:5px;
+}
+.rodape {
+    text-align: center;
+    background-color: lightgray;
+    margin-top: 0px;
+    padding: 5px 5px 5px 5px;
+    color: #204d74;
+    font-weight: bold;
+}

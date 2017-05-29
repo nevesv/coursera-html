@@ -1,0 +1,40 @@
+<div data-ng-if="foundList.items.length > 0">
+	<h3>{{foundList.myTitle}}:</h3>
+	<!-- name of the menu item, its short_name, and the description -->
+	<table class="table table-hover table-striped">
+		<head>
+			<tr>
+				<th>
+					Name
+				</th>
+				<th>
+					Short name
+				</th>
+				<th>
+					Description
+				</th>
+				<th></th>
+			</tr>
+		</head>
+		<body>
+			<tr data-ng-repeat=" item in foundList.items">
+				<td>
+					{{item.name}}
+				</td>
+				<td>
+					{{item.short_name}}
+				</td>
+				<td>
+					{{item.description}}
+				</td>
+				<td>
+					<a href="#">
+						<i class="glyphicon glyphicon-trash" data-ng-click="foundList.onRemove({index: $index});"
+						title="Remove item"></i>
+					</a>
+				</td>
+			</tr>
+		</body>
+	</table>
+</div>
+<div class="error" ng-transclude></div>
