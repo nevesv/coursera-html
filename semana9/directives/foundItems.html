@@ -28,9 +28,14 @@
 					{{item.description}}
 				</td>
 				<td>
-					<a href="#">
-						<i class="glyphicon glyphicon-trash" data-ng-click="foundList.onRemove({index: $index});"
-						title="Remove item"></i>
+					<button 
+						title="Remove item"
+						class="btn btn-sm btn-primary" 
+						data-ng-click="foundList.onRemove({index: $index});">
+						<i class="glyphicon glyphicon-trash"
+						></i>
+						Don't want this one!
+					</button>
 					</a>
 				</td>
 			</tr>

@@ -12,6 +12,10 @@
 .btn-primary{
   margin-top:5px;
 }
+
+button > i {
+    padding-right: 5px;
+}
 .rodape {
     text-align: center;
     background-color: lightgray;
