@@ -10,8 +10,9 @@ angular.module('NarrowItDownApp',[])
 function foundItemsDirective(){
 	var ddo = {
 		templateUrl: 'directives/foundItems.html',
+		restrict: 'E',
 		scope:{
-			items: '<',
+			foundItems: '<',
 			myTitle: '@title',
 			onRemove: '&'
 		},
@@ -59,10 +60,10 @@ function foundItemsDirectiveController(){
 	var foundList = this;
 
 	foundList.displayAlert = function(){
-		if (foundList.items == null){
+		if (foundList.foundItems == null){
 			return false;
 		}
-		if (foundList.items.length > 0){
+		if (foundList.foundItems.length > 0){
 			return false;
 		}else{
 			return true;
