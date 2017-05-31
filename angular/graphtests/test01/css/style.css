@@ -1,0 +1,9 @@
+button.btn.btn-primary.clickable:visited,
+button.btn.btn-primary.clickable:focus,
+button.btn.btn-primary.clickable:active,
+button.btn.btn-primary.clickable:hover,
+button.btn.btn-primary.clickable{
+	background:none;
+	border:none;
+	/*color: #fff;*/
+}

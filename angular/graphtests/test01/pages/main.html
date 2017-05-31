@@ -1,0 +1,56 @@
+<div data-ng-controller="myCrtl" class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12">
+			<h3>Bootstrap, Angular and Graphs tests <br><small>Collapsable and graphs tests</small></h3>
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+			  		<a href="#mainPanelCol" data-toggle="collapse" class="clickable" data-ng-click="$event.preventDefault();">
+			  			<i class="glyphicon glyphicon-chevron-up btn-primary"></i>
+			  		</a>
+			  		<span>
+			  			Panel heading with title
+			  		</span>
+			  	
+			  	</div>
+			  	<div class="panel-body collapse in" id="mainPanelCol">
+			    	Panel content
+			  	</div>
+			</div>
+
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+			  		<a data-toggle="collapse" href="#mainPanelCol2" data-ng-click="$event.preventDefault();" class="clickable">
+			  			<i class="glyphicon glyphicon-chevron-up btn-primary"></i>
+			  		</a>
+			  		<span>
+			  			Panel heading with title 2
+			  		</span>
+			  	
+			  	</div>
+			  	<div class="panel-body collapse in" id="mainPanelCol2">
+			    	Panel content 2
+			  	</div>
+			</div>
+
+		</div>
+	</div>
+	<script type="text/javascript">
+	    jQuery(function ($) {
+	        $('.panel-heading a.clickable').on("click", function (e) {
+	            if ($(this).hasClass('panel-collapsed')) {
+	                // expand the panel
+	                $(this).parents('.panel').find('.panel-body').slideDown();
+	                $(this).removeClass('panel-collapsed');
+	                $(this).find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+	            }
+	            else {
+	                // collapse the panel
+	                $(this).parents('.panel').find('.panel-body').slideUp();
+	                $(this).addClass('panel-collapsed');
+	                $(this).find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+	            }
+	        });
+	    });
+	</script>
+
+</div>
