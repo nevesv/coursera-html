@@ -31,7 +31,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   })
   
   .state('items',{
-  	url:'/items/{:selectedCategoryId}',
+  	url:'/items/{selectedCategoryId}',
   	templateUrl: 'str/html/templates/items-list.template.html',
   	controller: 'ItemsListController as itemsList',
   	resolve:{
