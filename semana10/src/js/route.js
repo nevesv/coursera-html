@@ -31,12 +31,12 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   })
   
   .state('items',{
-  	url:'/items/{selectedItem}',
+  	url:'/items/{selectedCategoryId}',
   	templateUrl: 'str/html/templates/items-list.template.html',
   	controller: 'ItemsListController as itemsList',
   	resolve:{
   		menuItems: ['$stateParams','MenuDataService', function($stateParams, MenuDataService){
-  			return MenuDataService.getItemsForCategory($stateParams.selectedItem.short_name);
+  			return MenuDataService.getItemsForCategory($stateParams.selectedCategoryId);
   		}]
   	}
   });
