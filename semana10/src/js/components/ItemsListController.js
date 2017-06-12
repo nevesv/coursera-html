@@ -9,5 +9,8 @@ function ItemsListController (menuItems){
 	var itemsList = this;
 	console.log('ItemsListController:', itemsList);
 	itemsList.menuItems = menuItems;
-}
+	
+	var cancel = itemList.$oninit(){
+		console.log('oninit');	
+	}
 })();
