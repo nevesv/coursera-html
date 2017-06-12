@@ -29,19 +29,16 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   		}]
   	}
 
-  /*.state('categories.items',{
-  	url:'/items',
+  .state('categories.items',{
+  	url:'/items/{selectedItem}',
   	templateUrl: 'str/html/templates/items-list.template.html',
   	controller: 'ItemsListController as itemsList',
-  	params:{
-  		selectedItem: null
-  	},
   	resolve:{
-  		menuItems: ['MenuDataService','selectedItem', function(MenuDataService, selectedItem){
-  			return MenuDataService.getItemsForCategory(selectedItem.short_name);
+  		menuItems: ['$stateParams','MenuDataService', function($stateParams, MenuDataService){
+  			return MenuDataService.getItemsForCategory($stateParams.selectedItem.short_name);
   		}]
   	}
-  })*/
+  })
 
   });
 
