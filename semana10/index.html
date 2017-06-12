@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html data-ng-app='MenuApp'>
+	<head>
+		<meta charset="utf-8"></meta>
+		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+		<link rel="stylesheet" href="styles/bootstrap.min.css">
+	    <link rel="stylesheet" href="styles/style.css">
+
+		<title>Semana 10 - Menu APP</title>
+	</head>
+	<body>
+	<div class="container">
+		<h1>Module 4 Coding Assignment - Menu APP</h1>
+		<div class="jumbotron">
+			<div class="row">
+				
+				<!--<div class="col-6-md">
+					
+				</div>
+
+				<div class="col-6-md">
+					
+				</div>-->
+
+				<ui-view></ui-view>
+				
+			</div>
+		</div>
+	</div>
+
+		<!-- Libraries -->
+		<script src="lib/jquery-3.1.0.min.js"></script>
+		<script src="lib/angular.min.js"></script>
+	    <script src="lib/angular-ui-router.min.js"></script>
+
+	    <!-- Modules -->
+	    <script src="src/js/menuapp.module.js"></script>
+	    <script src="src/js/data.module.js"></script>
+
+	    <!-- Routes -->
+		<script src="src/js/route.js"></script>
+	    
+	    <!-- Module artifacts -->
+	    
+	    <script src="src/js/services/menudata.service.js"></script>
+	    <script src="src/js/components/categories.component.js"></script>
+	    <script src="src/js/components/CategoriesListController.js"></script>
+	    <script src="src/js/components/CategoriesController.js"></script>
+	    <script src="src/js/components/items.component.js"></script>
+	    
+
+
+	</body>
+</html>
