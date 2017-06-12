@@ -1,10 +1,8 @@
 <!--<h3>Title: {{$ctrl.myTitle}}</h3> -->
 <ul>
-	<li data-ng-repeat="item in $ctrl.menuItems.data">
+	<li data-ng-repeat="item in $ctrl.menuItems.data.menu_items">
 		{{item.id}} - {{item.shortName}} - {{item.name}}
 		<!--<a href="">{{item}}</a>-->
 		<!--<button></button>-->
 	</li>
-	
-	{{$ctrl.menuItems}}
 </ul>
