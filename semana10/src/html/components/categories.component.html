@@ -1,6 +1,7 @@
 <h3>{{catCtrl.myTitle}}</h3>
 <ul>
-	<li data-ng-repeat="item in catCtrl.categoryItems.data">
+	<li data-ng-repeat="item in catCtrl.categoryItems.data"
+		ui-sref="categories.items({selectedItem: item})">
 		<a href="">{{item.name}} - {{item.short_name}}</a>
 		<!--<button></button>-->
 	</li>
